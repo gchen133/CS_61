@@ -1,0 +1,96 @@
+bit-binary digit 1 or a 0 ie 8 bits is enough for 256 separate items
+unsigned integer chart: decimal, binary, and hex
+signed magnitude vs unsigned: first digit determines whether the numbe is pos or neg
+1 is neg, 0 is pos
+one and two's compliment: one's is just inverse of normal binary, two's is 1's plus 1
+In unsigned encoding, 4 bits would suffice for +13 (since 2^4 = 16, which is > 13).
+But in two’s complement we need 5 bits to encode either +13 or −13:
+
+sign extension: adding say, a 5 bit number to an 8 bit one, we extend the first digit of 
+the number with less binary digits
+But if we are doing 2’s complement arithmetic, and the shorter number is negative, 
+we must preserve its negative value by padding with leading 1’s:
+
+Logic operations: and, or, xor and inverses with N
+0 0 AND = 0, OR = 0, XOR = 0
+0 1 AND = 0, OR = 1, XOR = 1
+1 1 AND = 1, OR = 1, XOR = 0
+1 0 AND = 0, OR = 1, XOR = 1
+Xor outputs a one only if the digits are different: 
+
+32 bit floating point representation: leading bit represents the sign of the number (N/P)
+next 8 bits represent the exponent part and last 23 represent the fraction portion (mantissa)
+
+x45A16F00 => b0100 0101 1010 0001 0110 1111 0000 0000
+Sign: bit[31] = 0 => +ve
+Biased exponent: bits[30:23] = 10001011 = 139 => actual exponent = 139 − 127 = 12
+Normalized fraction: bits [22:0] = 010 0001 0110 1111 0000 0000
+=> significand = 1.010 0001 0110 1111 0000 0000
+
+Familiarize yourself with the ascii table
+
+Logic gates: NOT, NOR, OR, NAND and AND
+different symbols for logic gates
+inverter:
+
+Decoder: can also be thought of as a pattern detector; takes n input bits and outputs 
+2^n bits, while only one of them will be asserted for any given input
+N INPUTS AND 2^N OUTPUTS
+
+Multiplexer (MUX): can be thought of as a switcher, takes n input bits and connects
+one to the output,  requires a n bit select signal
+N INPUTS AND 1 OUTPUT
+
+1-bit adder (aka full adder): A 1-bit adder circuit accepts two 1-bit binary numbers 
+and a carry input and outputs a 1-bit sum and a carry.
+3 INPUTS 2 OUTPUTS
+
+Hardware takes time to calculate results: this is called gate delay
+
+
+What is difference between D latch and gated latch?
+Image result for what is a gated d latch
+Q and not-Q are always opposite of one another. The D latch is nothing more than a 
+gated S-R latch with an inverter added to make R the complement (inverse) of S. 
+An application for the D latch is a 1-bit memory circuit.
+
+Memory systems: 
+address space; we need a lot of space to store data and all of those slots will have to
+have an address 
+
+That is determined by the number of bits we use for an address:
+3-bit addressing => address space = 8
+16-bit addressing => address space = 64 k
+32-bit addressing => address space = 4 Gig; etc.
+
+addressability; how many bits or byte can we store in each slot?
+
+EXAMPLE:
+A 4 x 3 bit memory:
+Address space = 2^2 = 4 (2-bit addressing => 4 “slots”);
+Addressability = 3 bits (each “slot” stores 3 bits).
+
+Know truth tables and logic gates n shit
+
+logic gates act similar to logic operators
+0 0 AND = 0, OR = 0, XOR = 0
+0 1 AND = 0, OR = 1, XOR = 1
+1 1 AND = 1, OR = 1, XOR = 0
+1 0 AND = 0, OR = 1, XOR = 1
+
+LD, loads a value intro the specified destination register; need an offset in order to 
+actually calculate the address
+LDR: only difference between this and LD is how the memory address is calculated:
+take the contents of the register and add an offset to it
+LDI: Load a value into register from memory; but the memory that stores out desired value
+is stored in another memory address
+LEA loads an address into a register
+
+
+
+
+
+
+
+
+

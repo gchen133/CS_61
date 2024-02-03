@@ -1,0 +1,24 @@
+start
+intro message
+big loop to get all inputs
+
+FIRST CHAR
+load r7 with the offset
+
+convert the first character to decimal
+
+OTHER CHAR
+load with negative decimal value of +
+add with input's decimal value to see if its zero, if yes, then it's +, if not, branch
+load with negative decimal value of -
+gets first chars value and compares it to the values of + and - to see if they are the same
+
+BAD CHAR
+
+NEWLINE ERROR
+
+ERROR MESSAGE
+
+PLUS CHAR
+
+MINUS CHAR

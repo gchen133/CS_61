@@ -1,0 +1,32 @@
+Coversions between ascii, binary, hex
+Hex to Binary
+xD1A3 to binary
+13 1 10 3
+b1101 0001 1010 0011
+29 to unsigned
+b11101
+
+-29 to 2's compliment
+b11101
+b00010
+b00011
+
+Actual exponent = biased exponent -127
+math
+1) Both numbers have to have the same number of bits (sign extend if they don't)
+2) overflow: Happens when adding 2 same signed numbers and recult is larger than
+can be stored in range
+
+Sequential vs combinational logic
+
+Boolean algebra
+And/OR
+A and A = A
+A and NA = 0
+A and 1 = A
+A and 0 = 0
+
+A or A = A
+A or NA = 1
+A or 1 = 1
+A or 0 = A
